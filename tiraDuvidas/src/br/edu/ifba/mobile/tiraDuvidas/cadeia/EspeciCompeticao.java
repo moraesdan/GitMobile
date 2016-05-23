@@ -3,11 +3,11 @@ package br.edu.ifba.mobile.tiraDuvidas.cadeia;
 public class EspeciCompeticao extends Especialista  {
 	
 	@Override
-	public String resolver(SubCategorias subcategorias) {
-		if(subcategorias == SubCategorias.COMPETICOES ){
+	public String resolver(Categoria categoria) {
+		if(categoria == Categoria.COMPETICOES ){
 			return "O especialista Pedro resolve essa duvida";
 		}
-		return proximo.resolver(subcategorias);
+		return proximo.resolver(categoria);
 	
 	}
 

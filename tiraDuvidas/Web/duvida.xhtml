@@ -1,0 +1,60 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:pm="http://primefaces.org/mobile">
+
+<f:view renderKitId="PRIMEFACES_MOBILE" />
+
+<h:head>
+	<script name="jquery/jquery.js" library="Primefaces"></script>
+</h:head>
+
+<h:body>
+
+	<pm:page id="duvida">
+
+		<pm:header title="Tira Dúvidas" />
+		<pm:content>
+
+			<h2 class="first"><center>Categorias</center></h2>
+			<p:accordionPanel>
+				<p:tab title="Casual">
+					<h:form>
+						<p:commandButton value="Peças" type="duvida.tipoDuvida" />
+						<p:commandButton value="Competições" type="" />
+						<p:commandButton value="Geometria" type="" />
+					</h:form>
+				</p:tab>
+				<p:tab title="Montain Bike">
+					<h:form>
+						<p:commandButton value="Peças" type="duvida.tipoDuvida" />
+						<p:commandButton value="Competições" type="" />
+					</h:form>
+				</p:tab>
+				<p:tab title="Profissional">
+					<h:form>
+						<p:commandButton value="Peças" type="duvida.tipoDuvida" />
+						<p:commandButton value="Competições" type="" />
+						<p:commandButton value="Geometria" type="" />
+					</h:form>
+				</p:tab>
+				<p:tab title="BMX">
+					<h:form>
+						<p:commandButton value="Peças" type="duvida.tipoDuvida" />
+						<p:commandButton value="Competições" type="" />
+					</h:form>
+				</p:tab>
+			</p:accordionPanel>
+
+
+
+		</pm:content>
+
+	</pm:page>
+
+</h:body>
+
+</html>
