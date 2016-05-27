@@ -11,6 +11,6 @@ protected Especialista proximo=null;
 		this.proximo=proximo;
 		}
 	}
-	public abstract String resolver(Categoria Categoria);
+	public abstract String resolver(Categoria categoria);
 
 }

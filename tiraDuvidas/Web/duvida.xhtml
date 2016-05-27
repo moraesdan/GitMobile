@@ -10,6 +10,7 @@
 
 <h:head>
 	<script name="jquery/jquery.js" library="Primefaces"></script>
+
 </h:head>
 
 <h:body>
@@ -19,42 +20,90 @@
 		<pm:header title="Tira Dúvidas" />
 		<pm:content>
 
-			<h2 class="first"><center>Categorias</center></h2>
+			<h2 value="CATEGORIAS"  class="first">
+				
+			</h2>
 			<p:accordionPanel>
 				<p:tab title="Casual">
 					<h:form>
-						<p:commandButton value="Peças" type="duvida.tipoDuvida" />
-						<p:commandButton value="Competições" type="" />
-						<p:commandButton value="Geometria" type="" />
+						<p:commandButton value="Peças" action="especialista">
+							<f:setPropertyActionListener target="#{duvi.escolha}" value="Peças" />
+						</p:commandButton>
+						
+						<p:commandButton value="Competições" action="especialista">
+							<f:setPropertyActionListener target="#{duvi.escolha}" value="Competições" />
+						</p:commandButton>
+						
+						<p:commandButton value="Geometria" action="especialista">
+							<f:setPropertyActionListener target="#{duvi.escolha}" value="Geometria" />
+						</p:commandButton>
 					</h:form>
 				</p:tab>
 				<p:tab title="Montain Bike">
 					<h:form>
-						<p:commandButton value="Peças" type="duvida.tipoDuvida" />
-						<p:commandButton value="Competições" type="" />
+						<p:commandButton value="Peças" action="especialista">
+							<f:setPropertyActionListener target="#{duvi.escolha}" value="Peças" />
+						</p:commandButton>
+						
+						<p:commandButton value="Competições" action="especialista">
+							<f:setPropertyActionListener target="#{duvi.escolha}" value="Competições" />
+						</p:commandButton>
+						
+						<p:commandButton value="Geometria" action="especialista">
+							<f:setPropertyActionListener target="#{duvi.escolha}" value="Geometria" />
+						</p:commandButton>
 					</h:form>
 				</p:tab>
+				
 				<p:tab title="Profissional">
 					<h:form>
-						<p:commandButton value="Peças" type="duvida.tipoDuvida" />
-						<p:commandButton value="Competições" type="" />
-						<p:commandButton value="Geometria" type="" />
+						<p:commandButton value="Peças" action="especialista">
+							<f:setPropertyActionListener target="#{duvi.escolha}" value="Peças" />
+						</p:commandButton>
+						
+						<p:commandButton value="Competições" action="especialista">
+							<f:setPropertyActionListener target="#{duvi.escolha}" value="Competições" />
+						</p:commandButton>
+						
+						<p:commandButton value="Geometria" action="especialista">
+							<f:setPropertyActionListener target="#{duvi.escolha}" value="Geometria" />
+						</p:commandButton>
+
 					</h:form>
 				</p:tab>
+				
 				<p:tab title="BMX">
 					<h:form>
-						<p:commandButton value="Peças" type="duvida.tipoDuvida" />
-						<p:commandButton value="Competições" type="" />
+						<p:commandButton value="Peças" action="especialista">
+							<f:setPropertyActionListener target="#{duvi.escolha}" value="Peças" />
+						</p:commandButton>
+						
+						<p:commandButton value="Competições" action="especialista">
+							<f:setPropertyActionListener target="#{duvi.escolha}" value="Competições" />
+						</p:commandButton>
+						
+						<p:commandButton value="Geometria" action="especialista">
+							<f:setPropertyActionListener target="#{duvi.escolha}" value="Geometria" />
+						</p:commandButton>
 					</h:form>
 				</p:tab>
 			</p:accordionPanel>
+			
+			<h:form>
+			<br/>
+			
+				<p:commandButton value="Voltar" action="inicio" />
+
+			</h:form>
 
 
 
 		</pm:content>
 
 	</pm:page>
-
+	
+	
+	
 </h:body>
 
 </html>

@@ -1,0 +1,55 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:pm="http://primefaces.org/mobile">
+
+<f:view renderKitId="PRIMEFACES_MOBILE" />
+
+<h:head>
+	<script name="jquery/jquery.js" library="Primefaces"></script>
+
+</h:head>
+
+<h:body>
+
+	<pm:page id="especialista">
+
+		<pm:header title="MyBike" />
+		<pm:content>
+			<h:form id="frmEspecialista">
+				<pm:field>
+					<p:outputLabel for="textarea" value="Digite aqui a sua dúvida:" />
+					<br />
+					<p:inputTextarea id="textarea" />
+				</pm:field>
+
+				<p:panelGrid columns="2">
+					<p:commandButton value="Voltar" action="duvida" />
+					<p:commandButton value="Salvar" actionListener="#{duvi.getEscolha}" onclick="PF('dlg1').show();" >
+					<p:dialog header="Sucesso!" widgetVar="dlg1" showEffect="pop">
+							<h:outputText value="Olá #{usuario.nome}, sua dúvida foi enviada com sucesso, um e-mail com a resposta será enviado para #{usuario.email} " />
+
+						</p:dialog>
+					</p:commandButton>
+				</p:panelGrid>
+				
+				<p:accordionPanel>
+				<p:tab title="Especialista em #{duvi.escolha}">
+					<h:panelGrid columns="2" cellpadding="10">
+						<p:graphicImage value="#{duvi.imagem}" />
+
+						<h:outputText value="#{duvi.resultado}" />
+					</h:panelGrid>
+				</p:tab>
+				</p:accordionPanel>
+			</h:form>
+		</pm:content>
+
+	</pm:page>
+
+</h:body>
+
+</html>

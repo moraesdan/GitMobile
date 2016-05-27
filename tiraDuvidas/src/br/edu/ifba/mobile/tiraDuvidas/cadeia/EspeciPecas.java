@@ -5,7 +5,7 @@ public class EspeciPecas extends Especialista {
 	@Override
 	public String resolver(Categoria categoria) {
 		if(categoria == Categoria.PECAS ){
-			return "O especialista Joao resolve essa duvida";
+			return "João Moreira - Mecânico";
 		}
 		return proximo.resolver(categoria);
 		

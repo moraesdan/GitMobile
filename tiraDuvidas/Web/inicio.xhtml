@@ -10,22 +10,20 @@
 
 <h:head>
 	<script name="jquery/jquery.js" library="Primefaces"></script>
-	<link rel="StyleSheet" type="text/css" href="css/estilos.css"
-		media="screen"></link>
-		<link rel="shortcut icon" type="image/png"
-		href="#{request.contextPath}/images/favicon.png" />
+	<link rel="StyleSheet" type="text/css" href="css/estilos.css" media="screen"></link>
+	<link rel="shortcut icon" type="image/png" href="#{request.contextPath}/images/favicon.png" />
 </h:head>
 
-<h:body>
+<h:body styleClass="background">
 
 	<pm:page id="inicio">
 
 		<pm:header title="MyBike" />
 		<pm:content>
 			<h:form id="frmInicio">
-				<p:commandButton value="CADASTRO" type="duvida.tipoDuvida" styleClass="btn" />
+				<p:commandButton value="CADASTRO" action="cadastro" styleClass="btn" />
 				<p:commandButton value="MONTE SUA BIKE" type="" styleClass="btn" />
-				<p:commandButton value="FALE COM UM ESPECIALISTA" action="duvida" styleClass="btn" />
+				<p:commandButton value="FALE COM UM ESPECIALISTA" action="duvida" styleClass="btn"  />
 			</h:form>
 		</pm:content>
 
